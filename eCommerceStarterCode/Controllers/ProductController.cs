@@ -1,4 +1,5 @@
 ﻿using eCommerceStarterCode.Data;
+using eCommerceStarterCode.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace eCommerceStarterCode.Controllers
 {
-    [Route("api/examples")]
+    [Route("api/products")]
     [ApiController]
-    public class ProductController : Controller 
+    public class ProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
         public ProductController(ApplicationDbContext context)
@@ -20,16 +21,15 @@ namespace eCommerceStarterCode.Controllers
             _context = context;
         }
         // <baseurl>/api/examples/user
-        [HttpGet("user"), Authorize]
-        public IActionResult GetCurrentUser()
+        [HttpGet]
+        public IActionResult GetAllProduct()
         {
-            var userId = User.FindFirstValue("id");
-            var user = _context.Users.Find(userId);
-            if (user == null)
+            var products = _context.Product;
+            if (products == null)
             {
                 return NotFound();
             }
-            return Ok(user);
+            return Ok(products);
         }
     }
 }

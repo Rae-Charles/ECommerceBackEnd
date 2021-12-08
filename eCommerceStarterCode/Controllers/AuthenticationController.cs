@@ -12,7 +12,7 @@ namespace eCommerceStarterCode.Controllers
     [Route("api/authentication")]
     [ApiController]
     public class AuthenticationController : ControllerBase
-    {
+    { 
         private readonly UserManager<User> _userManager;
         private readonly IMapper _mapper;
         private readonly IAuthenticationManager _authManager;
