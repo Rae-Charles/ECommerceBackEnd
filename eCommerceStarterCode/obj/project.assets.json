@@ -6054,19 +6054,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mitch\\.nuget\\packages\\": {}
+    "C:\\Users\\barke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
+      "projectUniqueName": "C:\\Users\\barke\\OneDrive\\Desktop\\Rae_Ecommerce_Clone\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
       "projectName": "eCommerceStarterCode",
-      "projectPath": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
-      "packagesPath": "C:\\Users\\mitch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\obj\\",
+      "projectPath": "C:\\Users\\barke\\OneDrive\\Desktop\\Rae_Ecommerce_Clone\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
+      "packagesPath": "C:\\Users\\barke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\barke\\OneDrive\\Desktop\\Rae_Ecommerce_Clone\\ECommerceBackEnd\\eCommerceStarterCode\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\barke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

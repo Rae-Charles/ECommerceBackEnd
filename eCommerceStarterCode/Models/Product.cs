@@ -12,19 +12,17 @@ namespace eCommerceStarterCode.Models
     public class Product
     {
         [Key]
-        public int Id { get; set; }
+        
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Decimal Price { get; set; }
+        public string Category { get; set; }
+        public ICollection<ShoppingCart> ShoppingCarts { get; set; }    
+        public ICollection<Review> Reviews { get; set; }
         
 
 
-        [ForeignKey("Categories")]
-
-        public int CategoryId { get; set; }
-
-        public Category Category { get; set; }
 
     
     }
