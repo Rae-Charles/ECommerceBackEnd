@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eCommerceStarterCode.Controllers
 {
-    [Route("api/[Ecommerce]")]
+    [Route("api/shoppingcart")]
     [ApiController]
     public class CartController 
     {
@@ -20,16 +20,5 @@ namespace eCommerceStarterCode.Controllers
             _context = context;
         }
         // <baseurl>/api/examples/user
-        [HttpGet("user"), Authorize]
-        public IActionResult GetCurrentUser()
-        {
-            var userId = User.FindFirstValue("id");
-            var user = _context.Users.Find(userId);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return Ok(user);
-        }
     }
 }

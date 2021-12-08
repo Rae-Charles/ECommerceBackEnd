@@ -24,11 +24,7 @@ namespace eCommerceStarterCode.Controllers
         [HttpGet]
         public IActionResult GetAllProduct()
         {
-            var products = _context.Product;
-            if (products == null)
-            {
-                return NotFound();
-            }
+            var products = _context.Products;
             return Ok(products);
         }
     }

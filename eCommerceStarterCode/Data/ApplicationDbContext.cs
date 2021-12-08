@@ -9,15 +9,22 @@ namespace eCommerceStarterCode.Data
     {
         public ApplicationDbContext(DbContextOptions options)
             :base(options)
-        {
+        { }
 
-        }
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<ShoppingCart> ShoppingCarts { get; set;}
+
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new RolesConfiguration());
+
+            modelBuilder.Entity<Review>()
+                .HasKey(bc => new { bc.UserId, bc.ProductId });
         }
 
     }
