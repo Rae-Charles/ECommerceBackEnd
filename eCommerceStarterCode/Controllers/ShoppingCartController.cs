@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eCommerceStarterCode.Controllers
 {
-    [Route("api/examples")]
+    [Route("api/[Ecommerce]")]
     [ApiController]
     public class CartController 
     {
