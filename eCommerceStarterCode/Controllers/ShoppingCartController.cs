@@ -34,6 +34,22 @@ namespace eCommerceStarterCode.Controllers
             _context.SaveChanges();
             return Ok(value);
         }
+
+        [HttpDelete("{id}"), Authorize]
+        public IActionResult Remove(int id)
+        {
+            var product = _context.Products.Find("{ProductId}/{UserId}");
+    
+             _context.Products.Remove(product);
+            _context.SaveChanges();
+            return Ok(product);
+        }
+
+
+
+
+
+
         // add http get method - find by user Id simlar to LINQ problems 
 
         // add http delete method - previousely we only needed "{id}" now we will want to have ("{ProductId}/{UserId}")]
