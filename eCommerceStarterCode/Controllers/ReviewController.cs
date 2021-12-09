@@ -19,17 +19,40 @@ namespace eCommerceStarterCode.Controllers
         {
             _context = context;
         }
-        // <baseurl>/api/examples/user
-        [HttpGet("user"), Authorize]
-        public IActionResult GetCurrentUser()
+        [HttpGet]
+        public IActionResult Get()
         {
-            var userId = User.FindFirstValue("id");
-            var user = _context.Users.Find(userId);
-            if (user == null)
+            var reviews = _context.Reviews;     
+            return Ok(reviews);
+        }
+        [HttpGet("{id}")]
+        public ActionResult Get(int id)
+        {
+            var review = _context.Reviews.FirstOrDefault(r => r.ReviewId == id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return Ok(user);
+            return Ok(review);
         }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Review value)
+        {
+            _context.Reviews.Add(value);
+            _context.SaveChanges();
+            return StatusCode(201, value);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, [FromBody]) Review value)
+
+
+
+       // add http post with Authorize
+       // user id logic like shopping cart
+       //_context.Revies.Add(value);
+       // context save changes like other example
+       // reutnr ok with the (value)
     }
 }
