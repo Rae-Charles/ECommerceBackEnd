@@ -1,4 +1,5 @@
 ﻿using eCommerceStarterCode.Data;
+using eCommerceStarterCode.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,10 +26,10 @@ namespace eCommerceStarterCode.Controllers
             var reviews = _context.Reviews;     
             return Ok(reviews);
         }
-        [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        [HttpGet("{productId}")]
+        public IActionResult Get(int productId)
         {
-            var review = _context.Reviews.FirstOrDefault(r => r.ReviewId == id);
+            var review = _context.Reviews.Where(r => r.ProductId == productId);
             if (review == null)
             {
                 return NotFound();
@@ -44,8 +45,8 @@ namespace eCommerceStarterCode.Controllers
             return StatusCode(201, value);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]) Review value)
+        [HttpGet("rating/{productId}")]
+        public IActionResult GetRatings(int productId) { }
 
 
 

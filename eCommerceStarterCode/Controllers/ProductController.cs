@@ -35,6 +35,7 @@ namespace eCommerceStarterCode.Controllers
             _context.SaveChanges();
             return StatusCode(201, value);
         }
+
         [HttpDelete("{id}"), Authorize]
         public IActionResult Remove (int id)
         {

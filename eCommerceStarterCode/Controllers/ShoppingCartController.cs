@@ -21,6 +21,15 @@ namespace eCommerceStarterCode.Controllers
         {
             _context = context;
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(string id)
+        {
+            var shoppingCart = _context.ShoppingCarts.Include(u => u.Product).Where(u => u.UserId == id);
+            return Ok(shoppingCart);
+            
+
+        }
         [HttpPost, Authorize]
         // address api/shoppingcart
         // add product to table
@@ -35,12 +44,13 @@ namespace eCommerceStarterCode.Controllers
             return Ok(value);
         }
 
-        [HttpDelete("{id}"), Authorize]
-        public IActionResult Remove(int id)
+
+         [HttpDelete("{ProductId}/{UserId}"), Authorize]
+        public IActionResult Remove(int productId, string UserId)
         {
-            var product = _context.Products.Find("{ProductId}/{UserId}");
+            var product = _context.ShoppingCarts.Find("{ProductId}/{UserId}");
     
-             _context.Products.Remove(product);
+             _context.ShoppingCarts.Remove(product);
             _context.SaveChanges();
             return Ok(product);
         }
