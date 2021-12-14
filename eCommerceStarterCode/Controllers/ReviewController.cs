@@ -13,19 +13,24 @@ namespace eCommerceStarterCode.Controllers
 {
     [Route("api/examples")]
     [ApiController]
-    public class ReviewController : Controller 
+    public class ReviewController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
         public ReviewController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        // GET: api/reviews
         [HttpGet]
         public IActionResult Get()
         {
             var reviews = _context.Reviews;     
             return Ok(reviews);
         }
+
+        // GET api/reviews/[productID]
+        //Gets all Reviews for a Certain ProductID
         [HttpGet("{productId}")]
         public IActionResult Get(int productId)
         {
@@ -37,6 +42,7 @@ namespace eCommerceStarterCode.Controllers
             return Ok(review);
         }
 
+
         [HttpPost]
         public IActionResult Post([FromBody] Review value)
         {
@@ -45,8 +51,9 @@ namespace eCommerceStarterCode.Controllers
             return StatusCode(201, value);
         }
 
-        [HttpGet("rating/{productId}")]
-        public IActionResult GetRatings(int productId) { }
+
+        //[HttpGet("rating/{productId}")]
+        //public IActionResult GetRatings(int productId) { }
 
 
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj": {}
+    "C:\\Users\\rachelharris\\Desktop\\ECommerceProjectBack\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj": {
+    "C:\\Users\\rachelharris\\Desktop\\ECommerceProjectBack\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
+        "projectUniqueName": "C:\\Users\\rachelharris\\Desktop\\ECommerceProjectBack\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
         "projectName": "eCommerceStarterCode",
-        "projectPath": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
-        "packagesPath": "C:\\Users\\mitch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mitch\\Desktop\\Dev Projects\\eCommerce\\eCommerceStarterCode\\eCommerceStarterCode\\obj\\",
+        "projectPath": "C:\\Users\\rachelharris\\Desktop\\ECommerceProjectBack\\ECommerceBackEnd\\eCommerceStarterCode\\eCommerceStarterCode.csproj",
+        "packagesPath": "C:\\Users\\rachelharris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rachelharris\\Desktop\\ECommerceProjectBack\\ECommerceBackEnd\\eCommerceStarterCode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mitch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rachelharris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

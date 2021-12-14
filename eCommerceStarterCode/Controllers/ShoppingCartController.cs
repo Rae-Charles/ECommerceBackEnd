@@ -22,6 +22,7 @@ namespace eCommerceStarterCode.Controllers
             _context = context;
         }
 
+        
         [HttpGet("{id}")]
         public IActionResult Get(string id)
         {
@@ -45,19 +46,15 @@ namespace eCommerceStarterCode.Controllers
         }
 
 
-         [HttpDelete("{ProductId}/{UserId}"), Authorize]
+        [HttpDelete("{ProductId}/{UserId}"), Authorize]
         public IActionResult Remove(int productId, string UserId)
         {
             var product = _context.ShoppingCarts.Find("{ProductId}/{UserId}");
     
-             _context.ShoppingCarts.Remove(product);
+            _context.ShoppingCarts.Remove(product);
             _context.SaveChanges();
             return Ok(product);
         }
-
-
-
-
 
 
         // add http get method - find by user Id simlar to LINQ problems 
